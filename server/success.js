@@ -1,10 +1,10 @@
-function submitForm(event) {
+function SubmitForm(event) {
     event.preventDefault(); // prevent default form submission behavior
-  
-    // send form data to server using AJAX
+
+    //send form data to server using AJAX
     $.ajax({
       type: 'POST',
-      url: '/send',
+      url: 'http://localhost:3000/send',
       data: $('#contact-form').serialize(),
       success: function(response) {
         // display thank you message in the div element
@@ -16,4 +16,5 @@ function submitForm(event) {
       }
     });
   }
+  
   

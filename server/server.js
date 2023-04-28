@@ -1,13 +1,14 @@
-const MongoClient = require('mongodb').MongoClient;
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const mongoose  = require('mongoose');
+const cors = require("cors");
 
 const app = express();
 
 // use body-parser middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(cors());
 // middleware function to log incoming requests to the console
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.url}`);
@@ -15,28 +16,22 @@ app.use((req, res, next) => {
 });
 
 // specify the connection string for your Atlas cluster
-const uri = "mongodb+srv://admin:Burb3rry!@kodegocluster.uhiiddj.mongodb.net/test?retryWrites=true&w=majority";
+const url = "mongodb+srv://admin:Burb3rry!@kodegocluster.uhiiddj.mongodb.net/Portfolio";
 
 console.log("Connecting to database...");
 // connect to your Atlas cluster
-MongoClient.connect(uri, { useUnifiedTopology: true }, (err, client) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  console.log("Connected to database");
-
-  // specify the name of your database and collection
-  const db = client.db("portfolioDatabase");
-  const collection = db.collection("portfolioCollection");
+mongoose.connect( url , { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on("error", (error) => console.log(error));
+db.once("open", () => console.log("Connected to database..."));
 
   // define a route to serve your HTML file
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+  app.get('/send', (req, res) => {
+    res.send('Please submit the form');
   });
 
   // define a route to handle form submissions
-  app.all('/send', (req, res) => {
+  app.post('/send', (req, res) => {
     console.log("Received form submission");
 
     // handle different HTTP methods
@@ -57,7 +52,7 @@ MongoClient.connect(uri, { useUnifiedTopology: true }, (err, client) => {
         };
 
         // insert the data into your MongoDB database
-        collection.insertOne(data, (err, result) => {
+        db.collection("tableMessages").insertOne(data, (err, result) => {
           if (err) {
             console.error(err);
             return res.status(500).send("Error inserting data into database");
@@ -78,4 +73,4 @@ MongoClient.connect(uri, { useUnifiedTopology: true }, (err, client) => {
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
   });
-});
+
