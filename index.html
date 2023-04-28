@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Alkaid's Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="apple-touch-icon" type="image/x-icon" href="assets/img/apple-touch-icon.png">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +17,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -318,7 +320,7 @@
     <section id="resume" class="resume">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title" data-aos="fade-up" data-aos-delay="100" >
           <h2>Resume</h2>
           <p>As a networking engineer, I have gained extensive experience in managing and optimizing network infrastructure, including designing, implementing, and troubleshooting LAN/WAN 
              environments. I have a deep understanding of routing and switching protocols, security protocols, and network virtualization technologies. My expertise in network performance 
@@ -337,7 +339,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
               <h4>Alkaid Jagape</h4>
@@ -420,99 +422,85 @@
 
 <!--******************************************************************* Projects *******************************************************************-->
 
-<div class="card">
+<div class="card" data-aos="fade-up" >
   <img src="assets/img/b1.jpg" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>John Doe</b></h4>
-    <p>Architect & Engineer</p>
+    <h4><b>Test Project 1</b></h4>
+    <p>Test Details</p>
   </div>
 </div>
 
-<div class="card">
+<div class="card" data-aos="fade-up" >
   <img src="assets/img/b2.jpg" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>John Doe</b></h4>
-    <p>Architect & Engineer</p>
+    <h4><b>Test Project 2</b></h4>
+    <p>Test Details</p>
   </div>
 </div>
 
-<div class="card">
+<div class="card" data-aos="fade-up" >
   <img src="assets/img/b3.jpg" alt="Avatar" style="width:100%">
   <div class="container">
-    <h4><b>John Doe</b></h4>
-    <p>Architect & Engineer</p>
+    <h4><b>Test Project 3</b></h4>
+    <p>Test Details</p>
+  </div>
+</div>
+
+<div class="card" data-aos="fade-up" >
+  <img src="assets/img/b4.jpg" alt="Avatar" style="width:100%" height="436.45">
+  <div class="container">
+    <h4><b>Test Project 4</b></h4>
+    <p>Test Details</p>
   </div>
 </div>
 
 <!--******************************************************************* Contact *******************************************************************-->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+    <div class="disclaimer">
+      <p><center>"Disclaimer: By submitting your personal information through this contact form, you acknowledge that you are providing consent for us to collect and process your 
+            information for the purpose of responding to your inquiry. We will take reasonable measures to protect the confidentiality and security of your personal information. 
+            However, please note that the Internet is not a completely secure medium and we cannot guarantee the security of any information transmitted to us through this contact form. 
+            By submitting your information, you accept these risks."</center></p>
+    </div>
+    <center>
+      <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+        <form id="contact-form" method="post" action="/send">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" class="form-control" id="name" required>
             </div>
-
+            <div class="form-group col-md-6">
+              <label for="email">Your Email</label>
+              <input type="email" class="form-control" name="email" id="email" required>
+            </div>
           </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+          <div class="form-group">
+            <label for="company">Your Company</label>
+            <input type="text" class="form-control" name="company" id="company" required>
           </div>
-
-        </div>
-
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" name="message" rows="10" required></textarea>
+          </div>
+          <br>
+          <div class="text-center"><button type="submit" onclick="submitForm(event)">Send Message</button></div>
+          <div id="thank-you-message"></div>
+        </form>
       </div>
-    </section>
+    </center>
+  </div>
+</section>
+
+
 <!--******************************************************************* Contact *******************************************************************-->
 
   </main>
@@ -530,10 +518,11 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="server/server.js"></script>
+  <script src="server/success.js"></script>
 
 </body>
 
